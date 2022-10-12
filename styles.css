@@ -1,0 +1,214 @@
+:root { 
+    --primary-dark: #333333;
+    --primary-light: #ededed;
+    --secondary-light: #fefefe;
+}
+
+html {
+    overflow-y: hidden;
+  }
+
+body * {
+    all: unset;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--primary-dark);
+    background-color: var(--primary-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+.header{
+    height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header h1{
+    margin-top: 10px;
+    font-size: 60px;
+    font-weight: 800;
+    text-shadow: rgb(0 0 0 / 10%) 0px 3px 8px;
+}
+
+.header .row {
+    margin-top: auto;
+}
+
+.footer {
+    /* background-color: var(--footer); */
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    /* border: solid; */
+}
+
+.screenDevisor {
+    flex: 1;
+    display: flex;
+}
+
+.screenDevisor.middle {
+    flex: 0;
+    justify-content: center;
+}
+
+.screenDevisor.left {
+    justify-content: flex-end;
+}
+.boardMiddle {
+    width: 500px;
+    /* Height is larger for the sake of the lower border */
+    height: 506px;
+    display: flex;
+    border: solid;
+    border-bottom: solid;
+    background-color: var(--primary-dark);
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuLeft {
+    /* width: 170px; */
+    height: 500px;
+    display: flex;
+    /* border: solid; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* background-color: var(--secondary-light); */
+    margin-right: 20px;
+}
+
+button {
+    height: 50px;
+    width: 170px;
+    background-color: var(--primary-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 8px;
+    border: solid;
+    cursor: pointer;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+    
+}
+
+input[type=color] {
+    all:revert;
+    border: none;
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    
+}
+
+input:hover {
+    transform: scale(1.05);
+}
+
+input[type=color]::-webkit-color-swatch {
+    border: none;
+    border-radius: 40px;
+    padding: 0;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type='range'] {
+        all:revert;
+        color: inherit;
+        overflow: hidden;
+        width: 160px;
+        height: 10px;
+        -webkit-appearance: none;
+        background-color: var(--primary-light);
+        border: solid;
+        border-radius: 10px;
+    }
+        
+    input[type='range']::-webkit-slider-runnable-track {
+        height: 10px;
+        -webkit-appearance: none;
+        color: var(--primary-dark);
+        margin-top: 0px;
+        border-radius: 22px;
+    }
+        
+    input[type='range']::-webkit-slider-thumb {
+        width: 10px;
+        -webkit-appearance: none;
+        height: 10px;
+        cursor: ew-resize;
+        background: var(--primary-dark);
+        box-shadow: -80px 0 0 80px var(--primary-dark);
+    }
+}
+
+.menuLeft button:hover {
+    transform: scale(1.05);
+}
+
+.menuLeft button:active {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+}
+
+button.active{
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+}
+
+.flexRow {
+    display: flex;
+    cursor: pointer;
+}
+
+.flexRow div {
+    background-color: var(--secondary-light);
+    cursor: pointer;
+}
+
+.flexRow div.colored {
+    background-color: var(--primary-dark);
+    cursor: pointer;
+}
+
+.boardMiddle {
+    cursor: pointer;
+}
